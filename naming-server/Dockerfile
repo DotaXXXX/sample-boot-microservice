@@ -9,10 +9,10 @@ COPY src ./src
 RUN mvn clean package -DskipTests
 
 # Use current Alpine-based OpenJDK image
-FROM eclipse-temurin:11-jre-alpine
+FROM adoptopenjdk:11-jre-hotspot
 
 # Install minimal packages
-RUN apk add --no-cache dumb-init
+RUN apt-get update && apt-get install -y dumb-init && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar

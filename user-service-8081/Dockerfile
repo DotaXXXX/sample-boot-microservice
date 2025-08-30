@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y dumb-init && rm -rf /var/lib/apt/lists/
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
-EXPOSE 8080
+EXPOSE 8081
 
 # Minimal JVM options for demo
 ENV JAVA_OPTS="-Xmx128m -Xms64m"

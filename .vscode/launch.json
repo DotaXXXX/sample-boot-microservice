@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SpringBootMicroserviceEurekaNamingServerApplication",
+            "request": "launch",
+            "mainClass": "lab.microservice.namingserver.SpringBootMicroserviceEurekaNamingServerApplication",
+            "projectName": "naming-server"
+        },
+        {
+            "type": "java",
             "name": "Launch EurekaNamingServer",
             "request": "launch",
             "mainClass": "lab.microservice.namingserver.SpringBootMicroserviceEurekaNamingServerApplication",
@@ -19,6 +26,5 @@
             "projectName": "sample-microservice-hello",
             "args": "--server.port=8100"
         }
-
     ]
 }
